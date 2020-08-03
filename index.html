@@ -52,7 +52,7 @@
             </div>
         </div>
         <h3>MAKE YOUR PICK!</h3>
-        <form>
+        <form onsubmit="return submitForm(event)" id="new-pizza">
             <div class="row">
                 <div class="col-md-4">
 
@@ -121,7 +121,7 @@
                     </div>
                     <div class="radio">
                         <label for="toppings">
-                            <input type="radio" name="toppings" value="barberque-steak">
+                            <input type="radio" class="form" name="toppings" value="barberque-steak">
                             Barberque steak
                         </label>
                     </div>
