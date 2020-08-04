@@ -1,3 +1,28 @@
+function dropdown() {
+    var pizza = document.getElementById("dropdown");
+    var displayText = pizza.options[pizza.selected].text();
+}
+function ("order").click() {
+    var size = document.getElementById("dropdown");
+    if (size === "small") {
+        var price = 600
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Business logic
 // function Pizza(size, crust, toppings) {
 //     this.size = size;
