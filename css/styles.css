@@ -13,3 +13,7 @@ h1 {
     text-align: left;
     padding-left: 40px;
 }
+h2 {
+    text-align: center;
+    font-style: italic;
+}
