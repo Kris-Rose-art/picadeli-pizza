@@ -5,13 +5,14 @@
 }
 .logo {
     background-color: transparent;
+    padding-left: 10px;
 }
 h1 {
     text-align: center;
 }
 .container2 {
     text-align: left;
-    padding-left: 40px;
+    padding-left: 80px;
 }
 h2 {
     text-align: center;
