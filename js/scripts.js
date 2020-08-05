@@ -14,73 +14,84 @@ function ("button.order").click() {
 }
 switch (mySize) {
     case "0":
-        size-price = 0;
-        console.log (size-price);
+        size_price = 0;
+        console.log (size_price);
         break;
     case "large":
-        size-price = 1000;
-        console.log (size-price);
+        size_price = 1000;
+        console.log (size_price);
         break;
     case "medium":
-        size-price = 800;
-        console.log (size-price);
+        size_price = 800;
+        console.log (size_price);
         break; 
     case "small":
-        size-price = 600;
-        console.log (size-price);
+        size_price = 600;
+        console.log (size_price);
         break;
-    default console.log ("error");    
+    default: console.log ("error");    
 }
 switch (myToppings) {
     case "0":
-        toppings-price = 0;
-        console.log (toppings-price);
+        toppings_price = 0;
+        console.log (toppings_price);
         break;
     case "hawaiian":
-        toppings-price = 300;
-        console.log (toppings-price);
+        toppings_price = 300;
+        console.log (toppings_price);
         break;
     case "meatdeluxe":
-        toppings-price = 400;
-        console.log (toppings-price);
+        toppings_price = 400;
+        console.log (toppings_price);
         break; 
     case "periperi-chicken":
-        toppings-price = 300;
-        console.log (toppings-price);
+        toppings_price = 300;
+        console.log (toppings_price);
         break;
     case "bbq steak":
-        toppings-price = 300;
-        console.log (toppings-price);
+        toppings_price = 300;
+        console.log (toppings_price);
         break;
     case "veg tikka":
-        toppings-price = 400;
+        toppings_price = 400;
         console.log (toppings-price);
         break; 
     case "boerewors":
-        toppings-price = 300;
-        console.log (toppings-price);
+        toppings_price = 300;
+        console.log (toppings_price);
         break;
         
-    default console.log ("error");    
+    default: console.log ("error");    
 }
 switch (myCrust) {
     case "0":
-        crust-price = 0;
-        console.log (crust-price);
+        crust_price = 0;
+        console.log (crust_price);
         break;
     case "crispy":
-        crust-price = 300;
-        console.log (crust-price);
+        crust_price = 300;
+        console.log (crust_price);
         break;
-    case "meatdeluxe":
-        crust-price = 400;
-        console.log (crust-price);
+    case "stuffed":
+        crust_price = 400;
+        console.log (crust_price);
         break; 
-    case "periperi-chicken":
-        crust-price = 300;
-        console.log (crust-price);
+    case "gluten-free":
+        crust_price = 300;
+        console.log (crust_price);
         break;
-    default console.log ("error"); 
+    default: console.log ("error"); 
+}
+if ((mySize == "0") && (myToppings == "0") && (myCrust == "0")) {
+    alert("Please make your order")
+}else{
+
+    $(parseInt("input[type=text]#price").value(total))
+    alert("bleh bleh bleh")
+}
+totalPrice = total * ("input[type=text]#quantity").value
+total = toppings_price + crust_price
+console.log (totalPrice);
 
 
 
