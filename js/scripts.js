@@ -2,13 +2,85 @@ function dropdown() {
     var pizza = document.getElementById("dropdown");
     var displayText = pizza.options[pizza.selected].text();
 }
-function ("order").click() {
-    var size = document.getElementById("dropdown");
-    if (size === "small") {
-        var price = 600
-    }
+function getPizza(size, toppings, crust) {
+    this.size = size;
+    this.toppings = toppings;
+    this.crust = crust;
 }
-
+function ("button.order").click() {
+    let mySize = $("#dropdown option:select").value()
+    let myToppings = $("#toppings option:select").value()
+    let myCrust = $("#crust option:select").value()
+}
+switch (mySize) {
+    case "0":
+        size-price = 0;
+        console.log (size-price);
+        break;
+    case "large":
+        size-price = 1000;
+        console.log (size-price);
+        break;
+    case "medium":
+        size-price = 800;
+        console.log (size-price);
+        break; 
+    case "small":
+        size-price = 600;
+        console.log (size-price);
+        break;
+    default console.log ("error");    
+}
+switch (myToppings) {
+    case "0":
+        toppings-price = 0;
+        console.log (toppings-price);
+        break;
+    case "hawaiian":
+        toppings-price = 300;
+        console.log (toppings-price);
+        break;
+    case "meatdeluxe":
+        toppings-price = 400;
+        console.log (toppings-price);
+        break; 
+    case "periperi-chicken":
+        toppings-price = 300;
+        console.log (toppings-price);
+        break;
+    case "bbq steak":
+        toppings-price = 300;
+        console.log (toppings-price);
+        break;
+    case "veg tikka":
+        toppings-price = 400;
+        console.log (toppings-price);
+        break; 
+    case "boerewors":
+        toppings-price = 300;
+        console.log (toppings-price);
+        break;
+        
+    default console.log ("error");    
+}
+switch (myCrust) {
+    case "0":
+        crust-price = 0;
+        console.log (crust-price);
+        break;
+    case "crispy":
+        crust-price = 300;
+        console.log (crust-price);
+        break;
+    case "meatdeluxe":
+        crust-price = 400;
+        console.log (crust-price);
+        break; 
+    case "periperi-chicken":
+        crust-price = 300;
+        console.log (crust-price);
+        break;
+    default console.log ("error"); 
 
 
 
