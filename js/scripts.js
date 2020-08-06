@@ -7,91 +7,132 @@ function getPizza(size, toppings, crust) {
     this.toppings = toppings;
     this.crust = crust;
 }
-function ("button.order").click() {
-    let mySize = $("#dropdown option:select").value()
-    let myToppings = $("#toppings option:select").value()
-    let myCrust = $("#crust option:select").value()
-}
-switch (mySize) {
-    case "0":
-        size_price = 0;
-        console.log (size_price);
-        break;
-    case "large":
-        size_price = 1000;
-        console.log (size_price);
-        break;
-    case "medium":
-        size_price = 800;
-        console.log (size_price);
-        break; 
-    case "small":
-        size_price = 600;
-        console.log (size_price);
-        break;
-    default: console.log ("error");    
-}
-switch (myToppings) {
-    case "0":
-        toppings_price = 0;
-        console.log (toppings_price);
-        break;
-    case "hawaiian":
-        toppings_price = 300;
-        console.log (toppings_price);
-        break;
-    case "meatdeluxe":
-        toppings_price = 400;
-        console.log (toppings_price);
-        break; 
-    case "periperi-chicken":
-        toppings_price = 300;
-        console.log (toppings_price);
-        break;
-    case "bbq steak":
-        toppings_price = 300;
-        console.log (toppings_price);
-        break;
-    case "veg tikka":
-        toppings_price = 400;
-        console.log (toppings-price);
-        break; 
-    case "boerewors":
-        toppings_price = 300;
-        console.log (toppings_price);
-        break;
-        
-    default: console.log ("error");    
-}
-switch (myCrust) {
-    case "0":
-        crust_price = 0;
-        console.log (crust_price);
-        break;
-    case "crispy":
-        crust_price = 300;
-        console.log (crust_price);
-        break;
-    case "stuffed":
-        crust_price = 400;
-        console.log (crust_price);
-        break; 
-    case "gluten-free":
-        crust_price = 300;
-        console.log (crust_price);
-        break;
-    default: console.log ("error"); 
-}
-if ((mySize == "0") && (myToppings == "0") && (myCrust == "0")) {
-    alert("Please make your order")
-}else{
+var myToppings = ["Hawaiian", "meatdeluxe", "periperi-chicken", "bbq steak", "veg tikka", "boerewors"];
+var myCrust = ["crispy", "stuffed", "gluten-free"];
+var mySize = ["small", "large", "medium"];
 
-    $(parseInt("input[type=text]#price").value(total))
-    alert("bleh bleh bleh")
+function submitForm(event) {
+        var form = new FormData(event.target)
+        var mySize = $("#dropdown option:select").value();
+        var myToppings = $("#toppings option:select").value();
+        var myCrust = $("#crust option:select").value();
+        var price = $("input[type=text]#quantity").value();
+
+    if (mySize === "small") {
+        var add = function(toppingsPriceSmall, crustPriceSmall) {
+        return (toppingsPriceSmall + crustPriceSmall)
+        };
+        var result = add(toppingsPriceSmall + crustPriceSmall);
+        var toppingsPriceSmall = 300;
+        var crustPriceSmall = 300;
+        
+        console.log ("result")
+    } 
+    else if (mySize==="medium") {
+        var add = function(toppingsPriceMedium, crustPriceMedium) {
+        return (parseInt(toppingsPriceMedium + crustPriceMedium))
+        };
+        var result = add(toppingsPriceMedium + crustPriceMedium)
+        var toppingsPriceMedium = 400;
+        var crustPriceMedium = 400;
+        alert(result);
+
+    }else if (mySize==="large") {
+        var add = function(toppingsPriceLarge, crustPriceLarge) {
+        return (parseInt(toppingsPriceLarge + crustPriceLarge))
+        
+        };
+        var result = add(toppingsPriceLarge, crustPriceLarge);
+        var toppingsPriceMedium = 500;
+        var crustPriceMedium = 500;
+        alert(result);
+    }
+    var totalPrice = (parseInt(result * $("input[type=text]#quantity").value()));
+    alert("totalPrice")
+
+    event.preventDefault();
 }
-totalPrice = total * ("input[type=text]#quantity").value
-total = toppings_price + crust_price
-console.log (totalPrice);
+
+// switch (mySize) {
+//     case "":
+//         size_price = 0;
+//         console.log (size_price);
+//         break;
+//     case "large":
+//         size_price = 1000;
+//         console.log (size_price);
+//         break;
+//     case "medium":
+//         size_price = 800;
+//         console.log (size_price);
+//         break; 
+//     case "small":
+//         size_price = 600;
+//         console.log (size_price);
+//         break;
+//     default: console.log ("Please pick a size.");    
+// }
+// switch (myToppings) {
+//     case "0":
+//         toppings_price = 0;
+//         console.log (toppings_price);
+//         break;
+//     case "hawaiian":
+//         toppings_price = 300;
+//         console.log (toppings_price);
+//         break;
+//     case "meatdeluxe":
+//         toppings_price = 400;
+//         console.log (toppings_price);
+//         break; 
+//     case "periperi-chicken":
+//         toppings_price = 300;
+//         console.log (toppings_price);
+//         break;
+//     case "bbq steak":
+//         toppings_price = 300;
+//         console.log (toppings_price);
+//         break;
+//     case "veg tikka":
+//         toppings_price = 400;
+//         console.log (toppings-price);
+//         break; 
+//     case "boerewors":
+//         toppings_price = 300;
+//         console.log (toppings_price);
+//         break;
+        
+//     default: console.log ("error");    
+// }
+// switch (myCrust) {
+//     case "0":
+//         crust_price = 0;
+//         console.log (crust_price);
+//         break;
+//     case "crispy":
+//         crust_price = 300;
+//         console.log (crust_price);
+//         break;
+//     case "stuffed":
+//         crust_price = 400;
+//         console.log (crust_price);
+//         break; 
+//     case "gluten-free":
+//         crust_price = 300;
+//         console.log (crust_price);
+//         break;
+//     default: console.log ("error"); 
+// }
+// if ((mySize == "0") && (myToppings == "0") && (myCrust == "0")) {
+//     alert("Please make your order")
+// }else{
+
+//     // $(parseInt("input[type=text]#price").value(total))
+//     alert("bleh bleh bleh")
+// }
+// totalPrice = total * ("input[type=text]#quantity").value
+// total = toppings_price + crust_price
+// console.log (totalPrice);
 
 
 

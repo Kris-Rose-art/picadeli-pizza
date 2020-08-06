@@ -76,6 +76,7 @@
         </div>
         <div class="container2">
             <h3>MAKE YOUR PICK!</h3>
+            <form onsubmit="return submitForm(event)">
                 Size:<select name="dropdown" id="dropdown">
                     
                     <option>large</option>
@@ -98,7 +99,8 @@
                 </select><hr>
                 Quantity: <input type="text" id="quantity" min="1" max="infinity"><hr>
                 Price:<input type="text" id="price"><hr>
-                <input type="button" class="order" onclick="" value="place your order">
+                <input type="submit" class="order" onclick="" value="place your order">
+            </form>
         </div>
         <!-- form onsubmit="return submitForm(event)" id="new-pizza">
             <div class="row">
@@ -197,7 +199,9 @@
 
 
     </div>
-    <!-- <script src="js/jquery-3.5.1.js"></script>
-    <script src="js/scripts.js"></script>  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+                    crossorigin="anonymous"></script>
+    <script src="./js/scripts.js"></script>
+    
 </body>
 </html>
