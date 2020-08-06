@@ -5,7 +5,7 @@
 This application allows users to chose the size, crust and toppings, see the price and chose whether or not they want it delivered to them. They are also able to order 
 as many pizzas as they would like.
 ## Setup/Installation Requirements
-In order to get this application, follow this live link.
+In order to get this application, follow this live link. https://kris-rose-art.github.io/picadeli-pizza/
 ## Technologies Used
 This application has been made using javascript, CSS and HTML languages.
 ## Support and contact details
