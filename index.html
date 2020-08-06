@@ -19,189 +19,90 @@
         </div>
         <h3>Are you hungry? Here are some of the pizza choices you can enjoy! 
         </h3>
-        <div class="container">
+        <div class="container" id="output">
             <div class="row">
                 <div class="col-md-4">
-            
-        
                     <h4>Sizes</h4>
-                    <ul>
-                        <li>Small: ksh 600</li>
-                        <li>Medium: ksh 800</li>
-                        <li>Large: ksh 1000</li>
-                    </ul>
+                        <ul>
+                            <li>Small: ksh 400</li>
+                            <li>Medium: ksh 600</li>
+                            <li>Large: ksh 800</li>
+                        </ul>
                 </div>
                 <div class="col-md-4">
                     <h4>Crust</h4>
-                    <ul>
-                        <li>crispy</li>
-                        <li>Stuffed</li>
-                        <li>Gluten-free</li>
-                    </ul>
+                        <ul>
+                            <li>crispy</li>
+                            <li>Stuffed</li>
+                            <li>Gluten-free</li>
+                        </ul>
                 </div>
                 <div class="col-md-4">
-                    <h4>Toppings</h4>
-                    <ul>
-                        <li>Hawaiian - pineapple</li>
-                        <li>Meat deluxe - beef pepperoni & bbq steak</li>
-                        <li>Chicken Periperi</li>
-                        <li>Barberque steak</li>
-                        <li>Boerewors</li>
-                        <li>veg tikka - mushrooms, onions, tikka sauce</li>
-                    </ul>
+                            <h4>Toppings</h4>
+                            <ul>
+                                <li>Hawaiian - pineapple</li>
+                                <li>Meat deluxe - beef pepperoni & bbq steak</li>
+                                <li>Chicken Periperi</li>
+                                <li>Barberque steak</li>
+                                <li>Boerewors</li>
+                                <li>veg tikka - mushrooms, onions, tikka sauce</li>
+                            </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>Small</h5>
-                    <ul>
-                        <li>Crust - ksh 300</li>
-                        <li>Toppings - ksh 300</li>
-                    </ul>
+                        <ul>
+                            <li>Crust - ksh 300</li>
+                            <li>Toppings - ksh 300</li>
+                        </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>Medium</h5>
-                    <ul>
-                        <li>Crust - ksh 400</li>
-                        <li>Toppings - ksh 400</li>
-                    </ul>
+                        <ul>
+                            <li>Crust - ksh 400</li>
+                            <li>Toppings - ksh 400</li>
+                        </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5>Large</h5>
-                    <ul>
-                        <li>Crust - ksh 500</li>
-                        <li>Toppings - ksh 500</li>
-                    </ul>
+                        <h5>Large</h5>
+                            <ul>
+                                <li>Crust - ksh 500</li>
+                                <li>Toppings - ksh 500</li>
+                            </ul>
                 </div>
-
+                    </div>
             </div>
         </div>
         <div class="container2">
             <h3>MAKE YOUR PICK!</h3>
-            <form onsubmit="return submitForm(event)">
-                Size:<select name="dropdown" id="dropdown">
+            <form id="formOrder">
+                Size:<select name="size" id="size">
                     
-                    <option>large</option>
-                    <option>medium</option>
-                    <option>small</option>
+                    <option value="800">large</option>
+                    <option value="600">medium</option>
+                    <option value="400">small</option>
                 </select><hr>
                 <div class="toppings"></div>
                 Toppings:<select name="toppings" id="toppings">
-                    <option>Hawaiian</option>
-                    <option>Meat Deluxe</option>
-                    <option>Periperi chicken</option>
-                    <option>bbq steak</option>
-                    <option>veg tikka</option>
-                    <option>Boerewors</option>
+                    <option value="150">Hawaiian</option>
+                    <option value="200">Meat Deluxe</option>
+                    <option value="150">Periperi chicken</option>
+                    <option value="150">bbq steak</option>
+                    <option value="150">veg tikka</option>
+                    <option value="150">Boerewors</option>
                 </select><hr>
                 Crust:<select name="crust" id="crust">
-                    <option>crispy</option>
-                    <option>stuffed</option>
-                    <option>gluten-free</option>
+                    <option value="150">crispy</option>
+                    <option value="150">stuffed</option>
+                    <option value="150">gluten-free</option>
                 </select><hr>
-                Quantity: <input type="text" id="quantity" min="1" max="infinity"><hr>
+                Quantity: <input type="number" id="quantity" min="1" max="infinity"><hr>
                 Price:<input type="text" id="price"><hr>
-                <input type="submit" class="order" onclick="" value="place your order">
+                <input type="button" class="order" onclick="" value="place your order">
             </form>
+    
         </div>
-        <!-- form onsubmit="return submitForm(event)" id="new-pizza">
-            <div class="row">
-                <div class="col-md-4">
-
-                
-            
-                    <header>SIZE</header>
-                    <div class="radio">
-                        <label for="size">
-                            <input type="radio" name="size" value="small" checked>
-                            small
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label for="size">
-                            <input type="radio" name="size" value="medium">
-                            medium
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label for="size">
-                            <input type="radio" name="size" value="large">
-                            large
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <header>CRUST</header>
-                    <div class="radio">
-                        <label for="crust">
-                            <input type="radio" name="crust" value="crispy" checked>
-                            crispy
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label for="crust">
-                            <input type="radio" name="crust" value="stuffed">
-                            stuffed
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label for="crust">
-                            <input type="radio" name="crust" value="gluten-free">
-                            gluten-free
-                        </label>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <header>TOPPINGS</header>
-                    <div class="radio">
-                        <label for="toppings">
-                            <input type="radio" name="toppings" value="hawaiian" checked>
-                            Hawaiian
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label for="toppings">
-                            <input type="radio" name="toppings" value="meat-deluxe">
-                            Meat Deluxe
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label for="toppings">
-                            <input type="radio" name="toppings" value="periperi-chicken">
-                            Periperi Chicken
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label for="toppings">
-                            <input type="radio" class="form" name="toppings" value="barberque-steak">
-                            Barberque steak
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label for="toppings">
-                            <input type="radio" name="toppings" value="Boerewors">
-                            Boerewors
-                        </label>
-                    </div>
-                    <div class="radio">
-                        <label for="toppings">
-                            <input type="radio" name="toppings" value="veg-tikka">
-                            Veg tikka
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="submit">
-                <label for="submit">
-                    <input type="submit" name="submit" value="place your order">
-                    
-                </label>
-            </div>
-        </form> -->
-
-
     </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-                    crossorigin="anonymous"></script>
-    <script src="./js/scripts.js"></script>
+        
     
 </body>
 </html>
