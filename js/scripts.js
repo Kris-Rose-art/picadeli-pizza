@@ -24,8 +24,12 @@ $(document).ready(function () {
         var pizzaToppingsChoice = $("#toppings option:selected").text();
         console.log(pizzaSizeChoice, pizzaCrustChoice, pizzaToppingsChoice)
 ​        console.log$(parseInt("input[type=text]#price").value(total))
-
-        //();
+        
+        if($("#size option:selected").text() && $("#crust option:selected").text() && $("#toppings option:selected").text()) {
+            alert("your pizza will be delivered.");
+        }else {
+            alert("please enter the required fields");
+        }
     })
     
 })
